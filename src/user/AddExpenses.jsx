@@ -95,7 +95,7 @@ export default function AddExpenses() {
       <form onSubmit={handleAddExpense}>
         
         <div>
-          <label>Expense Title *</label><br />
+          <label>Expense Title </label><br />
           <input
             type="text"
             name="expenseTitle"
@@ -106,7 +106,7 @@ export default function AddExpenses() {
         </div>
 
         <div>
-          <label>Amount *</label><br />
+          <label>Amount </label><br />
           <input
             type="number"
             name="expenseAmount"
@@ -118,7 +118,7 @@ export default function AddExpenses() {
         </div>
 
         <div>
-          <label>Category *</label><br />
+          <label>Category </label><br />
           <input
             type="text"
             name="expenseCategory"
@@ -129,7 +129,7 @@ export default function AddExpenses() {
         </div>
 
         <div>
-          <label>Date *</label><br />
+          <label>Date </label><br />
           <input
             type="date"
             name="expenseDate"
