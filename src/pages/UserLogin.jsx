@@ -28,15 +28,15 @@ const UserLogin = () => {
     );
 
     if (user) {
-      // Save session
+      
       sessionStorage.setItem('isUser', 'true');
-      sessionStorage.setItem('userName', user.username);   // fixed key: userName (matches AddExpenses & ViewExpenses)
+      sessionStorage.setItem('userName', user.username);   
       sessionStorage.setItem('fullName', user.fullName);
       sessionStorage.setItem('email', user.email);
       sessionStorage.setItem('userId', user.id);
 
-      // Notify App.jsx that sessionStorage changed so role updates
-      window.dispatchEvent(new Event('sessionStorageChange'));
+    
+    
 
       setFormData({ username: '', password: '' });
 

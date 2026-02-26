@@ -41,7 +41,7 @@ const AdminLogin = () => {
         username: '',
         password: '',
       });
-      window.location.href = '/';
+navigate('/admin/home')
     } else {
       setError('Invalid username or password');
       console.log('Invalid credentials');

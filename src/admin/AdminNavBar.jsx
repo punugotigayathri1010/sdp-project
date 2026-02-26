@@ -16,7 +16,7 @@ export default function AdminNavBar() {
   return (
     <div className="admin-container">
       <nav className="admin-navbar">
-        <h1>Admin Dashboard</h1>
+        <h1>Admin</h1>
         <ul className="navbar-links">
           <li>
             <Link to="/admin/home" className="nav-link">
