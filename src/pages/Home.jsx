@@ -23,7 +23,7 @@ const styles = {
     padding: "40px",
     backgroundColor: "#f4f7fc",
     minHeight: "100vh",
-    background: "linear-gradient(135deg, #8399d4, #1cc88a)"
+    background: "linear-gradient(135deg, #8399d4, #1cc88a))"
   },
   image: {
     width: "80%",

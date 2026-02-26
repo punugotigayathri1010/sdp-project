@@ -9,8 +9,7 @@ const Registration = () => {
     email: '',
     password: '',
     username: '',
-    currency: '',
-    language: '',
+    currency: ''
   });
 
   const handleChange = (e) => {
@@ -51,7 +50,7 @@ const Registration = () => {
       username: '',
       
       currency: '',
-      language: '',
+    
     });
   };
 
@@ -137,7 +136,7 @@ const Registration = () => {
           
          
 
-          {/* Preferred Currency */}
+    
           <div className="form-group">
             <label htmlFor="currency">Preferred Currency </label>
             <select
@@ -155,24 +154,7 @@ const Registration = () => {
             </select>
           </div>
 
-          {/* Preferred Language */}
-          <div className="form-group">
-            <label htmlFor="language">Preferred Language </label>
-            <select
-              id="language"
-              name="language"
-              value={formData.language}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Select Language</option>
-              <option value="English">English</option>
-              <option value="Hindi">Hindi</option>
-              <option value="Telugu">Telugu</option>
-              <option value="Tamil">Tamil</option>
-            </select>
-          </div>
-
+          
           <button type="submit" className="submit-btn">
             Register
           </button>
