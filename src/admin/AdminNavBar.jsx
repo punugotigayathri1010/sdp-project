@@ -15,28 +15,38 @@ export default function AdminNavBar() {
 
   return (
     <div className="admin-container">
+
+      {/* NAVBAR */}
       <nav className="admin-navbar">
-        <h1>Admin</h1>
-        <ul className="navbar-links">
-          <li>
-            <Link to="/admin/home" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/admin/view-users" className="nav-link">
-              View Users
-            </Link>
-          </li>
-          <li>
-            <button className="logout-btn" onClick={handleLogout}>
-              Logout
-            </button>
-          </li>
-        </ul>
+
+        {/* Arrow Logout Button - Top Left */}
+        <button
+          className="arrow-logout"
+          onClick={handleLogout}
+          title="Logout"
+        >
+          ←
+        </button>
+
+        {/* Center Navigation Links */}
+        <div className="nav-center">
+          <ul className="navbar-links">
+            <li>
+              <Link to="/admin/home" className="nav-link">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/admin/view-users" className="nav-link">
+                View Users
+              </Link>
+            </li>
+          </ul>
+        </div>
+
       </nav>
 
-      
+      {/* PAGE CONTENT */}
       <div className="admin-content">
         <Routes>
           <Route path="/admin/home" element={<AdminHome />} />
@@ -44,6 +54,7 @@ export default function AdminNavBar() {
           <Route path="/admin/logout" element={<AdminLogout />} />
         </Routes>
       </div>
+
     </div>
   );
 }

@@ -25,8 +25,8 @@ const AdminLogin = () => {
     const adminCredentials = JSON.parse(sessionStorage.getItem('adminCredentials'));
     
     
-    const defaultUsername = 'admin';
-    const defaultPassword = 'admin';
+    const defaultUsername = 'klu';
+    const defaultPassword = 'klu';
     
     const validUsername = adminCredentials?.username || defaultUsername;
     const validPassword = adminCredentials?.password || defaultPassword;
@@ -56,7 +56,7 @@ navigate('/admin/home')
         {error && <div className="error-message" style={{ color: 'red', marginBottom: '10px', padding: '10px', backgroundColor: '#ffe6e6', borderRadius: '4px' }}>{error}</div>}
         <form onSubmit={handleSubmit} className="login-form">
           <div className="form-group">
-            <label htmlFor="username">Username *</label>
+            <label htmlFor="username">Username </label>
             <input
               type="text"
               id="username"
@@ -69,7 +69,7 @@ navigate('/admin/home')
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Password *</label>
+            <label htmlFor="password">Password </label>
             <input
               type="password"
               id="password"

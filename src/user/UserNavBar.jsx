@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Routes, Route, useNavigate } from "react-router-dom";
-import "./user.css"
+import "./user.css";
 
 import UserHome from "./UserHome";
 import AddExpenses from "./AddExpenses";
@@ -16,32 +16,43 @@ export default function UserNavBar() {
 
   return (
     <div className="user-container">
+
+      {/* NAVBAR */}
       <nav className="user-navbar">
-        <h1>User</h1>
-        <ul className="navbar-links">
-          <li>
-            <Link to="/user/home" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/user/add-expenses" className="nav-link">
-              Add Expense
-            </Link>
-          </li>
-          <li>
-            <Link to="/user/view-expenses" className="nav-link">
-              View Expenses
-            </Link>
-          </li>
-          <li>
-            <button className="logout-btn" onClick={handleLogout}>
-              Logout
-            </button>
-          </li>
-        </ul>
+
+        {/* Arrow Logout Button (Top Left) */}
+        <button 
+          className="arrow-logout" 
+          onClick={handleLogout}
+          title="Logout"
+        >
+          ←
+        </button>
+
+        {/* Center Navigation Links */}
+        <div className="nav-center">
+          <ul className="navbar-links">
+            <li>
+              <Link to="/user/home" className="nav-link">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/user/add-expenses" className="nav-link">
+                Add Expense
+              </Link>
+            </li>
+            <li>
+              <Link to="/user/view-expenses" className="nav-link">
+                View Expenses
+              </Link>
+            </li>
+          </ul>
+        </div>
+
       </nav>
 
+      {/* PAGE CONTENT */}
       <div className="user-content">
         <Routes>
           <Route path="/user/home" element={<UserHome />} />
@@ -50,6 +61,7 @@ export default function UserNavBar() {
           <Route path="/user/logout" element={<UserLogout />} />
         </Routes>
       </div>
+
     </div>
   );
 }

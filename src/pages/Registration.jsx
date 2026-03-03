@@ -9,7 +9,8 @@ const Registration = () => {
     email: '',
     password: '',
     username: '',
-    currency: ''
+    currency: '',
+    language: '',
   });
 
   const handleChange = (e) => {
@@ -48,9 +49,8 @@ const Registration = () => {
       email: '',
       password: '',
       username: '',
-      
       currency: '',
-    
+      language: '',
     });
   };
 
@@ -60,9 +60,9 @@ const Registration = () => {
         <h1>User Registration</h1>
         <form onSubmit={handleSubmit} className="registration-form">
 
-          
+  
           <div className="form-group">
-            <label htmlFor="fullName">Full Name</label>
+            <label htmlFor="fullName">Full Name </label>
             <input
               type="text"
               id="fullName"
@@ -73,10 +73,8 @@ const Registration = () => {
               placeholder="Enter your full name"
             />
           </div>
-
-          
           <div className="form-group">
-            <label htmlFor="gender">Gender</label>
+            <label htmlFor="gender">Gender </label>
             <select
               id="gender"
               name="gender"
@@ -91,7 +89,6 @@ const Registration = () => {
             </select>
           </div>
 
-          
           <div className="form-group">
             <label htmlFor="email">Email ID </label>
             <input
@@ -105,7 +102,6 @@ const Registration = () => {
             />
           </div>
 
-      
           <div className="form-group">
             <label htmlFor="username">Username </label>
             <input
@@ -119,7 +115,6 @@ const Registration = () => {
             />
           </div>
 
-        
           <div className="form-group">
             <label htmlFor="password">Password </label>
             <input
@@ -133,10 +128,7 @@ const Registration = () => {
             />
           </div>
 
-          
-         
 
-    
           <div className="form-group">
             <label htmlFor="currency">Preferred Currency </label>
             <select
@@ -154,7 +146,23 @@ const Registration = () => {
             </select>
           </div>
 
-          
+          <div className="form-group">
+            <label htmlFor="language">Preferred Language *</label>
+            <select
+              id="language"
+              name="language"
+              value={formData.language}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select Language</option>
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+              <option value="Telugu">Telugu</option>
+              <option value="Tamil">Tamil</option>
+            </select>
+          </div>
+
           <button type="submit" className="submit-btn">
             Register
           </button>
