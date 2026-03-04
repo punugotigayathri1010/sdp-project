@@ -6,7 +6,7 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       setAnimate(true);
-    }, 200);
+    }, 200 );
   }, []);
 
   return (

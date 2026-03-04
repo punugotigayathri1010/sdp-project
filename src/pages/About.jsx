@@ -16,7 +16,7 @@ const About = () => {
 
       <p style={{ fontSize: "18px", lineHeight: "1.6", maxWidth: "800px", textAlign: "center", margin: "20px auto" }}>
         The Expense Tracking & Visualization System helps users record, 
-        monitor, and analyze their daily income and expenses.
+        monitor, and analyze their daily income and expenses. 
       </p>
 
       <p style={{ fontSize: "18px", lineHeight: "1.6", maxWidth: "800px"  , textAlign: "center", margin: "20px auto" }}>
