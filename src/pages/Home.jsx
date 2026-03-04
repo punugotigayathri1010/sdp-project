@@ -1,51 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 
 const Home = () => {
-  return (
-    <div style={{backgroundco}}>
+  const [animate, setAnimate] = useState(false);
 
-      <img 
-        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimate(true);
+    }, 200);
+  }, []);
+
+  return (
+    <div style={styles.container}>
+      <img
+        src="https://cdn.dribbble.com/userupload/44666325/file/822b88279dc8a004e3e9410767ce54b5.png?resize=752x&vertical=center"
         alt="Expense Tracking"
-        style={styles.image}
+        style={{
+          ...styles.image,
+          transform: animate ? "scale(1)" : "scale(1.4)",
+          opacity: animate ? 1 : 0,
+        }}
       />
 
-      <h1 style={styles.heading}>
-        Welcome to Expense Tracker
+      <h1
+        style={{
+          ...styles.heading,
+          transform: animate ? "translateY(0px)" : "translateY(40px)",
+          opacity: animate ? 1 : 0,
+        }}
+      >
       </h1>
-
-      <p style={styles.text}>
-        Track your expenses smartly and visualize your financial growth.
-      </p>
-
     </div>
   );
 };
 
 const styles = {
   container: {
-    textAlign: "center",
-    padding: "60px 20px"
+    width: "100%",
+    height: "100vh",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+    background: "linear-gradient(to right, #1e3c72, #96afdb)"
   },
 
   image: {
-    width: "80%",
-    maxWidth: "600px",
+    width: "100%",
+    maxWidth: "800px",
     borderRadius: "15px",
     marginBottom: "30px",
-    boxShadow: "0 10px 20px rgba(0,0,0,0.2)"
+    boxShadow: "0 15px 30px rgba(0,0,0,0.25)",
+    transition: "all 1s ease",
+
   },
 
   heading: {
     fontSize: "32px",
     fontWeight: "700",
-    marginBottom: "20px"
+    transition: "all 1s ease",
+  
   },
-
-  text: {
-    fontSize: "18px",
-    color: "#555"
-  }
 };
 
 export default Home;
