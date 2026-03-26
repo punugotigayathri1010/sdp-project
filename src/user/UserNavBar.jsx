@@ -6,6 +6,7 @@ import UserHome from "./UserHome";
 import AddExpenses from "./AddExpenses";
 import ViewExpenses from "./ViewExpenses";
 import UserLogout from "./UserLogout";
+import Report from "../user/Report";
 
 export default function UserNavBar() {
   const navigate = useNavigate();
@@ -47,6 +48,9 @@ export default function UserNavBar() {
                 View Expenses
               </Link>
             </li>
+            <Link to="/report" className="nav-link">
+            View Report
+            </Link>
           </ul>
         </div>
 
@@ -59,6 +63,7 @@ export default function UserNavBar() {
           <Route path="/user/add-expenses" element={<AddExpenses />} />
           <Route path="/user/view-expenses" element={<ViewExpenses />} />
           <Route path="/user/logout" element={<UserLogout />} />
+          <Route path="/report" element={<Report/>}/>
         </Routes>
       </div>
 

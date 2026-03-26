@@ -5,7 +5,6 @@ import "./admin.css";
 import AdminHome from "./AdminHome";
 import ViewUsers from "./ViewUsers";
 import AdminLogout from "./AdminLogout";
-
 export default function AdminNavBar() {
   const navigate = useNavigate();
 
@@ -40,6 +39,8 @@ export default function AdminNavBar() {
               <Link to="/admin/view-users" className="nav-link">
                 View Users
               </Link>
+              
+
             </li>
           </ul>
         </div>
@@ -52,7 +53,7 @@ export default function AdminNavBar() {
           <Route path="/admin/home" element={<AdminHome />} />
           <Route path="/admin/view-users" element={<ViewUsers />} />
           <Route path="/admin/logout" element={<AdminLogout />} />
-        </Routes>
+    </Routes>
       </div>
 
     </div>
