@@ -16,7 +16,7 @@ function Report() {
     setLoading(true);
     try {
       const data = await getReport(startDate, endDate);
-      console.log("Fetched Data:", data); // Check your browser console to see the structure
+      console.log("Fetched Data:", data);
       setReport(data);
     } catch (error) {
       console.error("Error fetching report:", error);
@@ -30,21 +30,21 @@ function Report() {
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <h2>Expense Report</h2>
 
-      {/* Date Filters */}
+  
       <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
         <input
           type="date"
-          value={startDate} // Added value binding
+          value={startDate} 
           onChange={(e) => setStartDate(e.target.value)}
         />
         <input
           type="date"
-          value={endDate} // Added value binding
+          value={endDate} 
           onChange={(e) => setEndDate(e.target.value)}
         />
       </div>
 
-      {/* Buttons */}
+  
       <div style={{ marginBottom: "20px" }}>
         <button onClick={handleGenerate} disabled={loading}>
           {loading ? "Generating..." : "Generate Report"}
@@ -54,13 +54,13 @@ function Report() {
 
       <hr />
 
-      {/* Report Display Logic */}
+      
       {loading && <p>Loading data, please wait...</p>}
 
       {!loading && report && (
         <div style={{ marginTop: "20px", border: "1px solid #ddd", padding: "15px" }}>
           <h3>Summary</h3>
-          {/* Using fallback values (|| 0) in case the API keys are missing */}
+          
           <p><strong>Total Expense:</strong> ₹{report.totalExpense || 0}</p>
           <p><strong>Total Income:</strong> ₹{report.totalIncome || 0}</p>
           <p><strong>Balance:</strong> ₹{report.balance || 0}</p>
