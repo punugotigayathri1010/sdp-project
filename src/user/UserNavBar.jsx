@@ -18,10 +18,10 @@ export default function UserNavBar() {
   return (
     <div className="user-container">
 
-      {/* NAVBAR */}
+    
       <nav className="user-navbar">
 
-        {/* Arrow Logout Button (Top Left) */}
+       
         <button 
           className="arrow-logout" 
           onClick={handleLogout}
@@ -30,7 +30,7 @@ export default function UserNavBar() {
           ←
         </button>
 
-        {/* Center Navigation Links */}
+       
         <div className="nav-center">
           <ul className="navbar-links">
             <li>
@@ -56,7 +56,7 @@ export default function UserNavBar() {
 
       </nav>
 
-      {/* PAGE CONTENT */}
+      
       <div className="user-content">
         <Routes>
           <Route path="/user/home" element={<UserHome />} />
