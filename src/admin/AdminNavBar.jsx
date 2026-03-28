@@ -15,10 +15,10 @@ export default function AdminNavBar() {
   return (
     <div className="admin-container">
 
-      {/* NAVBAR */}
+      
       <nav className="admin-navbar">
 
-        {/* Arrow Logout Button - Top Left */}
+       
         <button
           className="arrow-logout"
           onClick={handleLogout}
@@ -27,7 +27,7 @@ export default function AdminNavBar() {
           ←
         </button>
 
-        {/* Center Navigation Links */}
+        
         <div className="nav-center">
           <ul className="navbar-links">
             <li>
@@ -47,7 +47,7 @@ export default function AdminNavBar() {
 
       </nav>
 
-      {/* PAGE CONTENT */}
+      
       <div className="admin-content">
         <Routes>
           <Route path="/admin/home" element={<AdminHome />} />
