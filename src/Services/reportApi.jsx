@@ -17,7 +17,7 @@ export const getReport = async (startDate, endDate) => {
         categoryData: [
           { category: "Food", amount: Math.floor(randomExpense * 0.4) },
           { category: "Transport", amount: Math.floor(randomExpense * 0.3) },
-          
+
           { category: "Entertainment", amount: Math.floor(randomExpense * 0.3) },
         ],
       };
@@ -27,15 +27,5 @@ export const getReport = async (startDate, endDate) => {
   } catch (error) {
     console.error("API Error:", error);
     return null;
-  }
-};
-export const downloadReportPDF = async (startDate, endDate) => {
-  try {
-    
-    alert(`Downloading PDF for range: ${startDate} to ${endDate}`);
-    
-    
-  } catch (error) {
-    console.error("Download Error:", error);
   }
 };
