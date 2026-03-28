@@ -17,6 +17,7 @@ export const getReport = async (startDate, endDate) => {
         categoryData: [
           { category: "Food", amount: Math.floor(randomExpense * 0.4) },
           { category: "Transport", amount: Math.floor(randomExpense * 0.3) },
+          
           { category: "Entertainment", amount: Math.floor(randomExpense * 0.3) },
         ],
       };
